@@ -300,7 +300,7 @@ def test_delays(f, delays, equalize=True, check_list=None):
 
 def main(args):
     rng = np.random.default_rng(args.seed)
-    f = snap2_fengine.Snap2Fengine(args.host)
+    f = snap2_fengine.Snap2FengineEtcd(args.host)
     if args.initialize:
         f.initialize(read_only=False)
 
